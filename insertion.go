@@ -1,5 +1,6 @@
 package sorter
 
+// InsertionSort sorts the given array according to insertion sort algoritm
 func InsertionSort(arr []int) []int {
 	var key int
 	var j int
