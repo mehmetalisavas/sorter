@@ -4,7 +4,6 @@ package sorter
 func InsertionSort(arr []int) []int {
 	var key int
 	var j int
-	var resultArr []int
 
 	for i := 1; i < len(arr); i++ {
 		key = arr[i]
@@ -16,6 +15,5 @@ func InsertionSort(arr []int) []int {
 		arr[j+1] = key
 	}
 
-	resultArr = arr
-	return resultArr
+	return arr
 }
