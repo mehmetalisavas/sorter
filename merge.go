@@ -1,9 +1,5 @@
 package sorter
 
-//
-//Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).
-//Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list.
-
 // MergeSort divides the unsorted list sublists that containing 1 element
 // After this process, gets these each of list that has 1 element
 // and merge sublists repeatedly to produce new sorted  sublists
