@@ -30,3 +30,21 @@ func TestInsertionSort(t *testing.T) {
 		return
 	}
 }
+
+func TestRecursiveInsertionSort(t *testing.T) {
+	generatedArr, err := GenerateArray(8)
+	if err != nil {
+		t.Fatal(err.Error())
+	}
+
+	arr := RecursiveInsertionSort(generatedArr)
+	b, err := IsSorted(arr)
+	if err != nil {
+		t.Fatal(err.Error())
+	}
+
+	if !b {
+		fmt.Println("Array is not sorted")
+		return
+	}
+}
