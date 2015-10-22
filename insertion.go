@@ -17,3 +17,36 @@ func InsertionSort(arr []int) []int {
 
 	return arr
 }
+
+/////// Insertion Sort Recursively ////////
+
+func RecursiveInsertionSort(arr []int) []int {
+	lenArr := len(arr)
+	if lenArr < 2 {
+		return arr
+	}
+	newArr := arr[:lenArr-1]
+	r := RecursiveInsertionSort(newArr)
+	lastItem := arr[lenArr-1]
+
+	ins := Insert(r, lastItem)
+
+	return ins
+}
+
+func Insert(arr []int, key int) []int {
+	newArr := make([]int, len(arr)+1)
+	i := len(arr) - 1
+	for i >= 0 && arr[i] > key {
+		newArr[i+1] = arr[i]
+		i--
+	}
+	newArr[i+1] = key
+
+	for i >= 0 {
+		newArr[i] = arr[i]
+		i--
+	}
+
+	return newArr
+}
