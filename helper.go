@@ -49,6 +49,11 @@ func IsSorted(arr []int) (bool, error) {
 	return true, nil
 }
 
+func IsArrayElementsSame(givenArray, expArray []int) (bool, error) {
+	return true, nil
+
+}
+
 // equals gets 3 parameters
 // First, gets testing packages's itself
 // Second parameter is the expectation of value
