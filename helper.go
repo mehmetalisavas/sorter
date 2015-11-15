@@ -18,8 +18,9 @@ const (
 )
 
 var (
-	ErrNotSorted     = errors.New("Array is not sorted")
-	ErrArrayNoLength = errors.New("Array has no length")
+	ErrNotSorted            = errors.New("Array is not sorted")
+	ErrArrayNoLength        = errors.New("Array has no length")
+	ErrArrayElementsNotSame = errors.New("Array elements are not same")
 )
 
 // GenerateArray generates an array that has length with the given number
@@ -49,15 +50,30 @@ func IsSorted(arr []int) (bool, error) {
 	return true, nil
 }
 
+//  IsArrayElementsSame checks the given arrays are the same or not
 func IsArrayElementsSame(givenArray, expArray []int) (bool, error) {
+	for _, giv := range givenArray {
+		if !isInArray(giv, expArray) {
+			return false, ErrArrayElementsNotSame
+		}
+	}
 	return true, nil
+}
 
+func isInArray(element int, array []int) bool {
+	for _, a := range array {
+		if element == a {
+			return true
+		}
+	}
+	return false
 }
 
 // equals gets 3 parameters
 // First, gets testing packages's itself
 // Second parameter is the expectation of value
 // Third parameter is the actual value
+// Basicly, this is helper function for testing
 func equals(tb testing.TB, exp, act interface{}) {
 	if !reflect.DeepEqual(exp, act) {
 		_, file, line, _ := runtime.Caller(1)
