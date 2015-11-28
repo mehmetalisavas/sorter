@@ -11,9 +11,9 @@ package sorter
 // we have 2 sublists that have for left {4,3,6} and for right {2,9,8}
 // List will look like this
 // 					{4,3,6,2,9,8}
-// 			{4,3,6}				{2,9,8}
-// 		{4}		{3,6}		  {2}     {9,8}
-// 		{4}		{3} {6}		  {2}    {9}  {8}
+// 			{4,3,6}---------------|-----------{2,9,8}
+// 		{4}--------|------{3,6}		  {2}---------|---------{9,8}
+// 		{4}		{3}--|--{6}	  {2}   	    {9}---|---{8}
 //---- After this section
 // Merge will work to bring together the sublists as sorted
 func MergeSort(arr []int) []int {
