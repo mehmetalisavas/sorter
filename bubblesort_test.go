@@ -12,13 +12,12 @@ func TestBubbleSort(t *testing.T) {
 	}
 
 	arr := BubbleSort(generatedArr)
-	b, err := IsSorted(arr)
+	isSorted, err := IsSorted(arr)
 	if err != nil {
 		t.Fatal(err.Error())
 	}
 
-	if !b {
-		fmt.Println("Array is not sorted"
-		return
+	if !isSorted {
+		t.Fatal("Array is not sorted")
 	}
 }
