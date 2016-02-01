@@ -60,6 +60,7 @@ func IsArrayElementsSame(givenArray, expArray []int) (bool, error) {
 	return true, nil
 }
 
+// isInArray checks the given element is in the given array or not
 func isInArray(element int, array []int) bool {
 	for _, a := range array {
 		if element == a {
