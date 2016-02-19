@@ -14,6 +14,7 @@ func TestInsertionSortManual(t *testing.T) {
 	equals(t, exp, arr)
 }
 
+// TestInsertionSort sorts the generated array with insertion sort algorithm
 func TestInsertionSort(t *testing.T) {
 	generatedArr, err := GenerateArray(8)
 	if err != nil {
@@ -32,6 +33,7 @@ func TestInsertionSort(t *testing.T) {
 	}
 }
 
+// TestRecursiveInsertionSort sorts the generated array with insertion sort algorithm recursively
 func TestRecursiveInsertionSort(t *testing.T) {
 	generatedArr, err := GenerateArray(8)
 	if err != nil {
