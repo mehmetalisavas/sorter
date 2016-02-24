@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// TestMergeSort generates array with 8 elements and checks if orders correctly or not
 func TestMergeSort(t *testing.T) {
 	generatedArr, err := GenerateArray(8)
 	if err != nil {
