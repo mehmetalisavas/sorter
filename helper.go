@@ -17,6 +17,7 @@ const (
 	LENGTH = 100
 )
 
+// These variables are the error vars for error handling
 var (
 	ErrNotSorted            = errors.New("Array is not sorted")
 	ErrArrayNoLength        = errors.New("Array has no length")
