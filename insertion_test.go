@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// TestInsertionSortManual
+// TestInsertionSortManual sorts the random array and should find result array
 func TestInsertionSortManual(t *testing.T) {
 	arrRandom := []int{7, 2, 5, 4, 6, 9}
 	resultArr := []int{2, 4, 5, 6, 7, 9}
