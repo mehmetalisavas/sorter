@@ -20,6 +20,7 @@ func InsertionSort(arr []int) []int {
 
 /////// Insertion Sort Recursively ////////
 
+// RecursiveInsertionSort
 func RecursiveInsertionSort(arr []int) []int {
 	lenArr := len(arr)
 	if lenArr < 2 {
@@ -34,6 +35,7 @@ func RecursiveInsertionSort(arr []int) []int {
 	return ins
 }
 
+// Insert
 func Insert(arr []int, key int) []int {
 	newArr := make([]int, len(arr)+1)
 	i := len(arr) - 1
