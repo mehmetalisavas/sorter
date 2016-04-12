@@ -1,5 +1,6 @@
 package sorter
 
+// SelectionSort
 func SelectionSort(arr []int) []int {
 	var min int
 	var temp int
