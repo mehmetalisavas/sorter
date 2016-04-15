@@ -48,6 +48,7 @@ func IsSorted(arr []int) (bool, error) {
 			return false, ErrNotSorted
 		}
 	}
+	
 	return true, nil
 }
 
@@ -68,6 +69,7 @@ func isInArray(element int, array []int) bool {
 			return true
 		}
 	}
+	
 	return false
 }
 
