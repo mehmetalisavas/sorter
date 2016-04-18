@@ -59,6 +59,7 @@ func IsArrayElementsSame(givenArray, expArray []int) (bool, error) {
 			return false, ErrArrayElementsNotSame
 		}
 	}
+	
 	return true, nil
 }
 
