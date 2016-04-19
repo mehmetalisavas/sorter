@@ -11,6 +11,7 @@ func TestInsertionSortManual(t *testing.T) {
 	resultArr := []int{2, 4, 5, 6, 7, 9}
 	arr := InsertionSort(arrRandom)
 	exp := resultArr
+	
 	equals(t, exp, arr)
 }
 
@@ -22,6 +23,7 @@ func TestInsertionSort(t *testing.T) {
 	}
 
 	arr := InsertionSort(generatedArr)
+	
 	b, err := IsSorted(arr)
 	if err != nil {
 		t.Fatal(err.Error())
@@ -41,6 +43,7 @@ func TestRecursiveInsertionSort(t *testing.T) {
 	}
 
 	arr := RecursiveInsertionSort(generatedArr)
+	
 	b, err := IsSorted(arr)
 	if err != nil {
 		t.Fatal(err.Error())
