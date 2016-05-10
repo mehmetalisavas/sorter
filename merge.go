@@ -15,7 +15,9 @@ package sorter
 // 		{4}--------|------{3,6}		  {2}---------|---------{9,8}
 // 		{4}		{3}--|--{6}	  {2}   	    {9}---|---{8}
 //
+//
 //---- After this section
+//
 // Merge will work to bring together the sublists as sorted
 func MergeSort(arr []int) []int {
 	if len(arr) < 2 {
@@ -59,4 +61,5 @@ func Merge(left, right []int) []int {
 	}
 
 	return arr
+	
 }
