@@ -19,11 +19,13 @@ func TestIsSorted(t *testing.T) {
 		{[]int{0, 1, 2, 3, 4, 3}, false},
 	}
 	for _, test := range tests {
-		// never ignore err
-		// here we only check isSorted value
+		// if we dont capture variable here, then its not guaranteed all the array
+		// values will be tested
 		test := test // capture range variable
 		t.Run("", func(t *testing.T) {
 			t.Parallel()
+			// never ignore err
+			// here we only check isSorted value
 			isSorted, _ := IsSorted(test.arr)
 			if isSorted != test.isSorted {
 				t.Fatalf("result of isSorted %v should be %v\n", test.arr, test.isSorted)
