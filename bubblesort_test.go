@@ -1,9 +1,6 @@
 package sorter
 
-import (
-	"fmt"
-	"testing"
-)
+import "testing"
 
 // TestBubbleSort generates the array with 8 elements randomly
 // and checks the BubbleSort is running correctly or not
@@ -14,7 +11,7 @@ func TestBubbleSort(t *testing.T) {
 	}
 
 	arr := BubbleSort(generatedArr)
-	
+
 	isSorted, err := IsSorted(arr)
 	if err != nil {
 		t.Fatal(err.Error())
