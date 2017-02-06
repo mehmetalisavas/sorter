@@ -1,6 +1,6 @@
 package sorter
 
-// InsertionSort sorts the given array according to insertion sort algoritm
+// InsertionSort sorts the given array according to insertion sort algorithm
 func InsertionSort(arr []int) []int {
 	var key int
 	var j int
@@ -20,7 +20,7 @@ func InsertionSort(arr []int) []int {
 
 /////// Insertion Sort Recursively ////////
 
-// RecursiveInsertionSort
+// RecursiveInsertionSort sorts the array recursively
 func RecursiveInsertionSort(arr []int) []int {
 	lenArr := len(arr)
 	if lenArr < 2 {
@@ -35,7 +35,7 @@ func RecursiveInsertionSort(arr []int) []int {
 	return ins
 }
 
-// Insert
+// Insert inserts the array
 func Insert(arr []int, key int) []int {
 	newArr := make([]int, len(arr)+1)
 	i := len(arr) - 1
