@@ -21,3 +21,35 @@ func TestBubbleSort(t *testing.T) {
 		t.Fatal("Array is not sorted")
 	}
 }
+
+func TestBubbleSortParallel(t *testing.T) {
+	tests := []struct {
+		arraySize int
+		isSorted  bool
+		err       error
+	}{
+		{0, false, ErrArrayNoLength},
+		{1, true, nil},
+		{2, true, nil},
+		{3, true, nil},
+		{4, true, nil},
+		{10, true, nil},
+	}
+
+	for _, test := range tests {
+		test := test // capture variable
+		t.Run("", func(t *testing.T) {
+			t.Parallel()
+			arr, err := GenerateArray(test.arraySize)
+			if err != test.err {
+				t.Fatalf("error should be: %v, but got: %v", test.err, err)
+			}
+
+			if len(arr) != test.arraySize {
+				t.Fatalf("array length should equal: %v, but got: %v", test.arraySize, len(arr))
+			}
+
+		})
+	}
+
+}
