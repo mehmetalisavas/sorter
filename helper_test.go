@@ -33,3 +33,35 @@ func TestIsSorted(t *testing.T) {
 		})
 	}
 }
+
+func TestGenerateArray(t *testing.T) {
+	tests := []struct {
+		item int
+		err  error
+	}{
+		{-1, ErrArrayNoLength},
+		{0, ErrArrayNoLength},
+		{1, nil},
+		{2, nil},
+		{3, nil},
+		{10, nil},
+		{110, nil},
+	}
+	for _, test := range tests {
+		// if we dont capture variable here, then its not guaranteed all the array
+		// values will be tested
+		test := test // capture range variable
+		t.Run("", func(t *testing.T) {
+			t.Parallel()
+			// never ignore err
+			// here we only check isSorted value
+			arr, err := GenerateArray(test.item)
+			if err != test.err {
+				t.Fatalf("error should be %v, but got: %v", err, test.err)
+			}
+			if len(arr) > 0 && len(arr) != test.item {
+				t.Fatalf("length of array should be %d, but got: %d", len(arr), test.item)
+			}
+		})
+	}
+}

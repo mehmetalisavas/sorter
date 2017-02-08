@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	// this is used to define number size
+	// LENGTH is used to define number size
 	// all created number (x) will be between 0 < x < LENGTH
 	LENGTH = 100
 )
@@ -48,18 +48,18 @@ func IsSorted(arr []int) (bool, error) {
 			return false, ErrNotSorted
 		}
 	}
-	
+
 	return true, nil
 }
 
-//  IsArrayElementsSame checks the given arrays are the same or not
+// IsArrayElementsSame checks the given arrays are the same or not
 func IsArrayElementsSame(givenArray, expArray []int) (bool, error) {
 	for _, giv := range givenArray {
 		if !isInArray(giv, expArray) {
 			return false, ErrArrayElementsNotSame
 		}
 	}
-	
+
 	return true, nil
 }
 
@@ -70,7 +70,7 @@ func isInArray(element int, array []int) bool {
 			return true
 		}
 	}
-	
+
 	return false
 }
 
@@ -86,4 +86,3 @@ func equals(tb testing.TB, exp, act interface{}) {
 		tb.Fail()
 	}
 }
-
