@@ -35,6 +35,7 @@ func MergeSort(arr []int) []int {
 	return merge
 }
 
+// Merge merges the 2 arrays
 func Merge(left, right []int) []int {
 	arr := make([]int, len(left)+len(right))
 	var i, j, k int
@@ -61,5 +62,5 @@ func Merge(left, right []int) []int {
 	}
 
 	return arr
-	
+
 }

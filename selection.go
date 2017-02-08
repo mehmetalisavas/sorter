@@ -1,6 +1,6 @@
 package sorter
 
-// SelectionSort
+// SelectionSort is a sorting algorithm
 func SelectionSort(arr []int) []int {
 	var min int
 	var temp int
@@ -12,7 +12,7 @@ func SelectionSort(arr []int) []int {
 				min = j
 			}
 		}
-		
+
 		temp = arr[i]
 		arr[i] = arr[min]
 		arr[min] = temp
