@@ -49,6 +49,13 @@ func TestBubbleSortParallel(t *testing.T) {
 				t.Fatalf("array length should equal: %v, but got: %v", test.arraySize, len(arr))
 			}
 
+			sorted, err := IsSorted(BubbleSort(arr))
+			if err != nil {
+				t.Fatalf("error should be nil, but got:%v", err)
+			}
+			if !sorted {
+				t.Fatalf("array should be sorted:%v", sorted)
+			}
 		})
 	}
 
