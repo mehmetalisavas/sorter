@@ -58,5 +58,4 @@ func TestBubbleSortParallel(t *testing.T) {
 			}
 		})
 	}
-
 }
