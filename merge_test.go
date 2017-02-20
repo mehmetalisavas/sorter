@@ -24,6 +24,8 @@ func TestMergeSort(t *testing.T) {
 	}
 }
 
+// TestMergeSortParallel tests the given arrays if sorted or not
+// with parallelization
 func TestMergeSortParallel(t *testing.T) {
 	tests := []struct {
 		arraySize int
