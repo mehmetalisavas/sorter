@@ -24,7 +24,7 @@ func TestIsSorted(t *testing.T) {
 		test := test // capture range variable
 		t.Run("", func(t *testing.T) {
 			t.Parallel()
-			// never ignore err
+			// note: never ignore errors
 			// here we only check isSorted value
 			isSorted, _ := IsSorted(test.arr)
 			if isSorted != test.isSorted {
@@ -53,7 +53,7 @@ func TestGenerateArray(t *testing.T) {
 		test := test // capture range variable
 		t.Run("", func(t *testing.T) {
 			t.Parallel()
-			// never ignore err
+			// never ignore errors
 			// here we only check isSorted value
 			arr, err := GenerateArray(test.item)
 			if err != test.err {
