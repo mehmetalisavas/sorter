@@ -34,6 +34,7 @@ func TestIsSorted(t *testing.T) {
 	}
 }
 
+// TestGenerateArray tests the array generation with given size
 func TestGenerateArray(t *testing.T) {
 	tests := []struct {
 		item int
