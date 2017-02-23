@@ -1,6 +1,7 @@
 package sorter
 
 // InsertionSort sorts the given array according to insertion sort algorithm
+// its complexity is O(n^2)
 func InsertionSort(arr []int) []int {
 	var key int
 	var j int
