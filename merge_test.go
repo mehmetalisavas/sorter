@@ -1,9 +1,6 @@
 package sorter
 
-import (
-	"fmt"
-	"testing"
-)
+import "testing"
 
 // TestMergeSort generates array with 8 elements and checks if orders correctly or not
 func TestMergeSort(t *testing.T) {
@@ -19,13 +16,12 @@ func TestMergeSort(t *testing.T) {
 	}
 
 	if !b {
-		fmt.Println("Array is not sorted")
-		return
+		t.Fatal("Array is not sorted")
 	}
 }
 
-// TestMergeSortParallel tests the given arrays if sorted or not
-// with parallelization
+// TestMergeSortParallel tests the given arrays if sorted or not with
+// parallelization
 func TestMergeSortParallel(t *testing.T) {
 	tests := []struct {
 		arraySize int
