@@ -55,6 +55,7 @@ func TestRecursiveInsertionSort(t *testing.T) {
 	}
 }
 
+// TestInsertionSortParallel tests the insertion sort with paralleling
 func TestInsertionSortParallel(t *testing.T) {
 	tests := []struct {
 		arraySize int
