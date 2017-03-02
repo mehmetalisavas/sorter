@@ -41,7 +41,8 @@ func TestSelectionSortParallel(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		test := test // capture variable
+		// capture variable
+		test := test
 		t.Run("", func(t *testing.T) {
 			t.Parallel()
 			arr, err := GenerateArray(test.arraySize)
