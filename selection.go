@@ -18,5 +18,6 @@ func SelectionSort(arr []int) []int {
 		arr[min] = temp
 
 	}
+
 	return arr
 }
