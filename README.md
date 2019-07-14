@@ -1,5 +1,5 @@
 # sorter
-Sorting algorithms written in Go
+Sorting algorithms written in Go (still wip)
 
 Please check the test cases to make it clear
 
